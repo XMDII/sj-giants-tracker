@@ -1,11 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "api/mlb.js", "use": "@vercel/node" },
-    { "src": "public/**", "use": "@vercel/static" }
-  ],
+  "outputDirectory": "public",
+  "functions": {
+    "api/mlb.js": {
+      "runtime": "@vercel/node@3"
+    }
+  },
   "routes": [
-    { "src": "/api/mlb(.*)", "dest": "/api/mlb.js" },
-    { "src": "/(.*)", "dest": "/public/$1" }
+    { "src": "/api/mlb", "dest": "/api/mlb.js" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
