@@ -1,0 +1,16 @@
+{
+  "name": "sj-giants-tracker",
+  "version": "1.0.0",
+  "description": "San Jose Giants fan attendance tracker",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@vercel/node": "^3.0.0"
+  }
+}

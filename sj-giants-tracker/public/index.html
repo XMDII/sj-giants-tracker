@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Giants">
+  <meta name="theme-color" content="#F5A623">
+  <title>SJ Giants Tracker</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="screen-home" class="screen active"></div>
+    <div id="screen-games" class="screen"></div>
+    <div id="screen-players" class="screen"></div>
+    <div id="screen-prospects" class="screen"></div>
+    <div id="screen-record" class="screen"></div>
+  </div>
+
+  <nav class="tab-bar">
+    <button class="tab active" data-screen="home"><i class="ti ti-home"></i><span>Home</span></button>
+    <button class="tab" data-screen="games"><i class="ti ti-calendar"></i><span>Games</span></button>
+    <button class="tab" data-screen="players"><i class="ti ti-users"></i><span>Players</span></button>
+    <button class="tab" data-screen="prospects"><i class="ti ti-star"></i><span>Prospects</span></button>
+    <button class="tab" data-screen="record"><i class="ti ti-chart-bar"></i><span>Record</span></button>
+  </nav>
+
+  <!-- Add Game Modal -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div id="modal-box" class="modal-box"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
